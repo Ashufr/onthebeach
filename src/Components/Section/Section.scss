@@ -1,0 +1,233 @@
+@font-face {
+  font-family: Vandermark;
+  src: url(../../assests/logo-font.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+
+:root {
+  --primaryColor: #68cdd6;
+  --secondaryColor: #28b8c5;
+  --khaki: #d2b9aa;
+  --black: #070707;
+  --white: #fffafa;
+  --khakiLight: #f5eee9;
+  --textColor: #2a8a93;
+  --iconColor: #cccccc;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+
+  .container {
+    .top {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+
+      .icon-list {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        width: 75%;
+        justify-content: space-evenly;
+
+        .icon-div {
+          display: flex;
+          flex-direction: column;
+          padding: 1.5rem;
+          align-items: center;
+          gap: 10px;
+
+          .img-div {
+            transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            img {
+              width: 50px;
+              color: var(--khaki);
+              opacity: 0.3;
+            }
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            .icon-1 {
+              width: 65px !important;
+              transform: translateY(7px);
+            }
+
+            .icon-2 {
+              width: 55px;
+            }
+          }
+
+          p {
+            text-align: center;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+      }
+
+      .btn-div {
+        // width: 25%;
+
+        .box {
+          background: var(--khakiLight);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          width: 350px;
+        }
+
+        p {
+          width: 75%;
+          margin: 0 auto;
+          font-family: "Nanum Myeongjo", serif;
+          font-size: 25px;
+          color: #777;
+          text-align: center;
+          padding: 40px 0 70px 0;
+
+          span {
+            font-family: "Nanum Myeongjo", serif;
+            font-size: 25px;
+            font-style: italic;
+            color: #e5a49c;
+          }
+        }
+
+        .btn {
+          position: absolute;
+          background: var(--khaki);
+          padding: 2rem;
+          width: 350px;
+          top: 0;
+          transform: translateY(-100%);
+          z-index: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+          gap: 10px;
+          cursor: pointer;
+          color: var(--white);
+          letter-spacing: 1px;
+          transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+          .icon {
+            color: var(--secondaryColor);
+            transform: scale(0.9);
+          }
+
+          &:hover {
+            padding-bottom: 3rem;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      padding: 100px 0;
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        .heading {
+          min-width: 300px;
+          width: 20vw;
+          max-width: 450px;
+          text-align: right;
+
+          h2 {
+            font-size: 35px;
+            font-weight: 300;
+            line-height: 43px;
+          }
+        }
+
+        .aside {
+          min-width: 300px;
+
+          width: 30vw;
+          max-width: 500px;
+
+          p {
+            font-size: 20px;
+            font-weight: 200;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .section {
+    .container {
+      .top {
+        justify-content: space-evenly;
+
+        .icon-list {
+          width: 100%;
+        }
+
+        .btn-div {
+          display: none;
+        }
+      }
+
+      .bottom {
+        padding-top: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    .container {
+      .bottom {
+        padding: 3rem 2rem;
+        .content {
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+
+          .heading {
+            max-width: none;
+            width: 85%;
+            text-align: center;
+          }
+
+          .aside {
+            max-width: none;
+            width: 85%;
+            text-align: center;
+            // padding: 0 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .section {
+    .container {
+      .top {
+        display: none;
+      }
+    }
+  }
+}

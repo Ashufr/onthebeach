@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Vandermark;
+  src: url(../../assests/logo-font.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+
+:root {
+  --primaryColor: #68cdd6;
+  --secondaryColor: #28b8c5;
+  --khaki: #d2b9aa;
+  --black: #070707;
+  --white: #fffafa;
+  --khakiLight: #f5eee9;
+  --textColor: #2a8a93;
+  --iconColor: #cccccc;
+}
+
+
+
+
+.home{
+  position: relative;
+  height: auto;
+  max-height: 95vh;
+
+  .video {
+    height: auto;
+  
+    video {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      object-fit: cover;
+    }
+  }
+
+  .overlay{
+    z-index: -20;
+    opacity: 0;
+  }
+
+}
